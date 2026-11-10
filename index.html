@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!--
+  ==========================================================================
+  JUDUL FILE : index.html
+  FUNGSI     : Struktur semantik halaman utama website profil Ruparona Studio.
+  PETUNJUK PENGEMBANG:
+  - File ini dapat dibuka langsung via file:// atau di-host di web server.
+  - Teks dirender dari js/data.js dan aset visual dikelola di js/images.js.
+  ==========================================================================
+-->
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruparona Studio — Ruang Rawat Diri &amp; Grooming Terpadu</title>
+  <meta name="description" content="Profil dan daftar harga layanan Ruparona Studio: hair salon, barber, nail studio, lash &amp; brow, makeup acara, dan perawatan relaksasi wajah terpadu di Bandung.">
+
+  <!-- Font Eksternal Google Fonts dengan Fallback Sistem -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+
+  <!-- Stylesheet Utama -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Aksesibilitas Keyboard: Skip Link -->
+  <a class="skip-link" href="#konten-utama">Lewati ke konten utama</a>
+
+  <!-- Header Website (Dirender oleh RUParonaComponents.renderHeader) -->
+  <header id="site-header" class="site-header"></header>
+
+  <!-- Konten Utama -->
+  <main id="konten-utama">
+
+    <!-- 1. Bagian Hero -->
+    <section id="beranda" class="hero-section" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p id="hero-eyebrow" class="eyebrow"></p>
+          <h1 id="hero-title" class="hero-title"></h1>
+          <p id="hero-subtitle" class="hero-description"></p>
+          <div class="hero-actions">
+            <a id="hero-cta-primary" href="#kontak" class="btn btn--primary"></a>
+            <a id="hero-cta-secondary" href="#harga" class="btn btn--secondary"></a>
+          </div>
+          <dl id="hero-highlights" class="hero-highlights" aria-label="Ringkasan informasi studio"></dl>
+        </div>
+
+        <div class="hero-media-wrapper">
+          <div id="hero-media-slot" class="media-frame media-frame--hero"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Ringkasan Kelompok Layanan -->
+    <section id="ringkasan-layanan" class="section section--alt" aria-labelledby="summary-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Cakupan Layanan</p>
+          <h2 id="summary-title" class="section-title">Enam Area Perawatan dalam Satu Studio</h2>
+          <p id="summary-intro" class="section-description">
+            Setiap area kerja dirancang terpisah agar Anda mendapatkan suasana yang tenang dan fokus sesuai kebutuhan perawatan.
+          </p>
+        </div>
+        <div id="service-summary-grid" class="summary-grid"></div>
+      </div>
+    </section>
+
+    <!-- 3. Tentang Studio -->
+    <section id="tentang" class="section" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-media-col">
+          <div id="about-media-slot" class="media-frame media-frame--landscape"></div>
+          <p id="about-media-caption" class="media-caption"></p>
+        </div>
+        <div class="about-content-col">
+          <p class="eyebrow">Tentang Studio</p>
+          <h2 id="about-title" class="section-title">Dirancang untuk Kenyamanan Tanpa Kesan Berlebihan</h2>
+          <div id="about-paragraphs" class="prose-block"></div>
+          <div id="about-values" class="values-list" aria-label="Prinsip layanan studio"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Layanan dan Tarif -->
+    <section id="harga" class="section section--alt" aria-labelledby="pricing-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Daftar Layanan &amp; Biaya</p>
+          <h2 id="pricing-title" class="section-title">Pilihan Layanan &amp; Tarif Perawatan</h2>
+          <p id="pricing-note" class="section-description">
+            Tarif transparan untuk setiap sesi perawatan. Silakan pilih layanan yang Anda inginkan untuk menanyakan ketersediaan jadwal melalui WhatsApp.
+          </p>
+        </div>
+
+        <!-- Navigasi Cepat Kategori -->
+        <nav id="pricing-category-nav" class="category-pills" aria-label="Navigasi cepat kategori layanan"></nav>
+
+        <!-- Daftar Grup Tarif -->
+        <div id="pricing-groups-container" class="pricing-groups"></div>
+      </div>
+    </section>
+
+    <!-- 5. Galeri Suasana & Pengerjaan -->
+    <section id="galeri" class="section" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Dokumentasi Studio</p>
+          <h2 id="gallery-title" class="section-title">Suasana Ruang &amp; Fokus Pengerjaan</h2>
+          <p id="gallery-intro" class="section-description">
+            Penataan ruang tunggu, sudut kerja higienis, dan detail pengerjaan perawatan di Ruparona Studio.
+          </p>
+        </div>
+        <div id="gallery-grid" class="gallery-grid"></div>
+      </div>
+    </section>
+
+    <!-- 6. Pendekatan Kerja Studio -->
+    <section id="keunggulan" class="section section--alt" aria-labelledby="reasons-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Pendekatan Kerja</p>
+          <h2 id="reasons-title" class="section-title">Komitmen Pelayanan di Ruparona</h2>
+          <p class="section-description">
+            Mengutamakan kejelasan konsultasi sebelum tindakan dimulai, higienitas peralatan, dan kenyamanan waktu Anda.
+          </p>
+        </div>
+        <div id="reasons-grid" class="reasons-grid"></div>
+      </div>
+    </section>
+
+    <!-- 7. Ulasan Pelanggan -->
+    <section id="ulasan" class="section" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Kesan Kunjungan</p>
+          <h2 id="testimonials-title" class="section-title">Pengalaman Pelanggan Kami</h2>
+          <p id="testimonials-disclaimer" class="section-description"></p>
+        </div>
+        <div id="testimonials-grid" class="testimonials-grid"></div>
+      </div>
+    </section>
+
+    <!-- 8. Lokasi, Jam & Kontak -->
+    <section id="kontak" class="section section--contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-info-card">
+          <p class="eyebrow">Kunjungan &amp; Reservasi</p>
+          <h2 id="contact-title" class="section-title">Lokasi Studio &amp; Jam Operasional</h2>
+          <p id="contact-intro" class="section-description"></p>
+
+          <div class="contact-block">
+            <h3 class="contact-block__heading">Alamat Studio</h3>
+            <p id="contact-address" class="contact-block__text"></p>
+            <p id="contact-landmark" class="contact-block__subtext"></p>
+          </div>
+
+          <div class="contact-block">
+            <h3 class="contact-block__heading">Jam Operasional</h3>
+            <dl id="operating-hours-list" class="hours-list"></dl>
+          </div>
+
+          <div class="contact-block">
+            <h3 class="contact-block__heading">Saluran Komunikasi</h3>
+            <ul id="contact-channels-list" class="contact-channels"></ul>
+          </div>
+        </div>
+
+        <div class="contact-cta-card">
+          <h3 class="contact-cta-card__title">Konsultasi &amp; Reservasi Jadwal</h3>
+          <p class="contact-cta-card__desc">
+            Pilih topik rencana kedatangan di bawah ini untuk memulai percakapan langsung dengan tim resepsionis kami melalui WhatsApp.
+          </p>
+
+          <!-- Topik Pesan Cepat -->
+          <div id="whatsapp-topic-buttons" class="wa-topic-list" role="group" aria-label="Pilihan topik percakapan WhatsApp"></div>
+
+          <div class="wa-main-action">
+            <a id="contact-wa-main-btn" href="#kontak" class="btn btn--primary btn--full">
+              Hubungi via WhatsApp Sekarang
+            </a>
+            <p id="contact-wa-status-note" class="wa-status-note"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Website (Dirender oleh RUParonaComponents.renderFooter) -->
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <!-- Modal Konfirmasi WhatsApp (Muncul hanya jika tombol diaktifkan dalam mode pengaman lokal) -->
+  <div id="wa-demo-dialog" class="wa-modal" role="dialog" aria-modal="true" aria-labelledby="wa-modal-title" hidden>
+    <div class="wa-modal__backdrop" data-close-modal="true"></div>
+    <div class="wa-modal__box">
+      <p class="eyebrow">Konfirmasi Pesan WhatsApp</p>
+      <h2 id="wa-modal-title" class="wa-modal__title">Lanjutkan ke WhatsApp</h2>
+      <p class="wa-modal__desc">
+        Format pesan otomatis telah disiapkan untuk dikirimkan ke kontak WhatsApp Ruparona Studio:
+      </p>
+      <div class="wa-modal__preview-group">
+        <p class="wa-modal__label">Isi Pesan:</p>
+        <pre id="wa-modal-message-preview" class="wa-modal__pre"></pre>
+        <p class="wa-modal__label">Tujuan:</p>
+        <code id="wa-modal-url-preview" class="wa-modal__code"></code>
+      </div>
+      <div class="wa-modal__actions" style="gap: 0.75rem;">
+        <button type="button" id="wa-modal-close-btn" class="btn btn--secondary btn--sm">Batal</button>
+        <a id="wa-modal-open-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Buka WhatsApp Sekarang</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Urutan Script -->
+  <script src="js/data.js"></script>
+  <script src="js/images.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
